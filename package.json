@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
   "bugs": {
     "url": "https://github.com/CodeAdmiral/disc_node/issues"
   },

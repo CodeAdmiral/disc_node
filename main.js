@@ -1,8 +1,12 @@
+export NODE_OPTIONS="--unhandled-rejections=strict"
+
 const fs = require('fs');
 const Discord = require('discord.js');
 const Naughts = require('./Engine/naughts.js');
 const NaughtsInterface = require('./Interface/NaughtsInterface.js');
 const client = new Discord.Client();
+
+
 
 //Log the bot in
 client.login(fs.readFileSync('token.txt', 'utf8'));

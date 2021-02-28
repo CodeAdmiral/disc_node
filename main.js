@@ -1,4 +1,7 @@
-export NODE_OPTIONS="--unhandled-rejections=strict"
+process.on('unhandledRejection', (reason, p) => {
+  console.error('Unhandled Rejection at:', p, 'reason:', reason)
+  process.exit(1)
+});
 
 const fs = require('fs');
 const Discord = require('discord.js');

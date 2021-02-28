@@ -12,7 +12,7 @@ const client = new Discord.Client();
 
 
 //Log the bot in
-client.login(fs.readFileSync('token.txt', 'utf8'));
+client.login(fs.readFileSync('token.txt', 'utf8').trim());
 var prefix = '12 ';
 
 // Instantiate naught

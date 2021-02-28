@@ -1,5 +1,7 @@
 class NaughtsInterface {
     static HandleMessage = function(message, prefix) {
+        
+        // ----------- Help section ----------------------------------
         if ((message.content === prefix + 'help') | (message.content === prefix + '?')) {
             message.channel.send(
 `
@@ -18,31 +20,46 @@ shows the current game grid
 =================================        
         `);
         };
+        //--------------------------------------------------------------
+
+
+
+        // ------ Reset the game ---------------
         if (message.content === prefix + 'reset') {
             naughtsInstance.reset();
             message.channel.send('==== GAME TIC TAC TOE RESET ====');
         };
+        //--------------------------------------
+
+        //------------ Take player X and O ---------------
         if (message.content === prefix + 'px') {
-            taken = naughtsInstance.setPlayerX(message.author.id);
+            var taken = naughtsInstance.setPlayerX(message.author.username);
             if (taken == false)
                 message.channel.send('==== Player X has been set! ====');
             else
                 message.channel.send('==== Player X has already been taken! ====');
         };
         if (message.content === prefix + 'po') {
-
-            taken = naughtsInstance.setPlayerO(message.author.id);
+            var taken = naughtsInstance.setPlayerO(message.author.username);
 
             if (taken == false)
                 message.channel.send('==== Player O has been set! ====');
             else
                 message.channel.send('==== Player O has already been taken! ====');
         };
+        //--------------------------------------------------
+
+
+        //----------- show the grid ---------------------
         if (message.content === prefix + 'show') {
             message.channel.send(naughtsInstance.show());
         };
+        //----------------------------------------------
+
+
+        //--------- Make a move ------------------------
         if (message.content.startsWith(prefix + 'move')) {
-            if (message.author.id == naughtsInstance.nextPlay) {
+            if (message.author.username == naughtsInstance.nextPlay) {
                 var input = message.content.substring(prefix.length + 4);
                 naughtsInstance.move(input.trim());
                 message.channel.send(naughtsInstance.show());
@@ -51,6 +68,7 @@ shows the current game grid
                 message.channel.send("==== It's not your turn yet! ====");
             }
         };
+        //-----------------------------------------------
     };
 }
 

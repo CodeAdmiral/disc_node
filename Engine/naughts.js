@@ -55,13 +55,22 @@ class naughts {
     }
 
     show(){
-        var output = '.     |    1    |    2    |    3      |\n' +
-        'A   | ' + this.grid.a1 + ' | ' + this.grid.a2  + ' | ' + this.grid.a3 + '   |\n' +
-        '      |---------------------|' + ' \n' +
-        'B   | ' + this.grid.b1 + ' | ' + this.grid.b2  + ' | ' + this.grid.b3 + '   |\n' +
-        '      |---------------------|' + ' \n' +
-        'C   | ' + this.grid.c1 + ' | ' + this.grid.c2  + ' | ' + this.grid.c3 + '   |\n' 
-        return output;
+        var player =
+        '|===== WHOS PLAYING ======\t' + '\n' +
+        '|\t\tPlayer X\t|\t' + this.playerO + '\t\t' + '\n' +
+        '|\t\tPlayer O\t|\t' + this.playerX + '\t\t' + '\n' +
+        '|------------------------------------\t\t\n'+
+        '|\tWhos next\t|\t' + this.nextPlay + '\t\t\n' +
+        '|========================\t\t' + '\n\n\n'
+        
+        
+        var grid = '.     |    1    |    2    |    3    |\n' +
+        'A   | ' + this.grid.a1 + ' | ' + this.grid.a2  + ' | ' + this.grid.a3 + ' |\n' +
+        '      |--------------------|' + '\n' +
+        'B   | ' + this.grid.b1 + ' | ' + this.grid.b2  + ' | ' + this.grid.b3 + ' |\n' +
+        '      |--------------------|' + '\n' +
+        'C   | ' + this.grid.c1 + ' | ' + this.grid.c2  + ' | ' + this.grid.c3 + ' |\n' 
+        return player + grid;
     }
 }
 

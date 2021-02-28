@@ -24,12 +24,12 @@ shows the current game grid
 
 
 
-        // ------ Reset the game ---------------
+        // ------------ Reset the game ---------------
         if (message.content === prefix + 'reset') {
             naughtsInstance.reset();
             message.channel.send('==== GAME TIC TAC TOE RESET ====');
         };
-        //--------------------------------------
+        //--------------------------------------------
 
         //------------ Take player X and O ---------------
         if (message.content === prefix + 'px') {
@@ -69,6 +69,7 @@ shows the current game grid
             }
         };
         //-----------------------------------------------
+
     };
 }
 

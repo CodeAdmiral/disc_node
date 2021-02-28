@@ -11,11 +11,11 @@ class naughts {
 
     move(location){
         if(this.lastPlayed == 'O'){
-            this.grid[location] = '  X  ';
+            this.grid[location] = 'X';
             this.nextPlay = this.playerO;
             this.lastPlayed = 'X'
         }else if(this.lastPlayed == 'X'){
-            this.grid[location] = '  O  ';
+            this.grid[location] = 'O';
             this.nextPlay = this.playerX;
             this.lastPlayed = 'O'
         }
@@ -44,9 +44,9 @@ class naughts {
     reset(){
         this.grid =
         { 
-            a1: '        ', a2: '        ', a3: '        ',
-            b1: '        ', b2: '        ', b3: '        ',
-            c1: '        ', c2: '        ', c3: '        '    
+            a1: ' ', a2: ' ', a3: ' ',
+            b1: ' ', b2: ' ', b3: ' ',
+            c1: ' ', c2: ' ', c3: ' '    
         }
         this.lastPlayed = 'X';
         this.playerX = '';
@@ -55,22 +55,24 @@ class naughts {
     }
 
     show(){
-        var player =
-        '|===== WHOS PLAYING ======\t' + '\n' +
-        '|\t\tPlayer X\t|\t' + this.playerO + '\t\t' + '\n' +
-        '|\t\tPlayer O\t|\t' + this.playerX + '\t\t' + '\n' +
-        '|------------------------------------\t\t\n'+
-        '|\tWhos next\t|\t' + this.nextPlay + '\t\t\n' +
-        '|========================\t\t' + '\n\n\n'
+        var player = 
+        '\t|========== WHOS PLAYING ========\t' + '\n' +
+        '\t| Player X\t |\t' + this.playerO + '\t\t' + '\n' +
+        '\t| Player O\t |\t' + this.playerX + '\t\t' + '\n' +
+        '\t|--------------------------------\t\t\n'+
+        '\t| Whos next\t|\t' + this.nextPlay + '\t\t\n' +
+        '\t|================================\t\t' + '\n\n\n'
         
         
-        var grid = '.     |    1    |    2    |    3    |\n' +
-        'A   | ' + this.grid.a1 + ' | ' + this.grid.a2  + ' | ' + this.grid.a3 + ' |\n' +
-        '      |--------------------|' + '\n' +
-        'B   | ' + this.grid.b1 + ' | ' + this.grid.b2  + ' | ' + this.grid.b3 + ' |\n' +
-        '      |--------------------|' + '\n' +
-        'C   | ' + this.grid.c1 + ' | ' + this.grid.c2  + ' | ' + this.grid.c3 + ' |\n' 
-        return player + grid;
+        var grid = '\t |\t1\t|\t2\t|\t3\t|\n' +
+        '\t |-----------------------------|' + '\n' +
+        'A\t|\t' + this.grid.a1 + '\t|\t' + this.grid.a2  + '\t|\t' + this.grid.a3 + '\t|\n' +
+        '\t |-----------------------------|' + '\n' +
+        'B\t|\t' + this.grid.b1 + '\t|\t' + this.grid.b2  + '\t|\t' + this.grid.b3 + '\t|\n' +
+        '\t |-----------------------------|' + '\n' +
+        'C\t|\t' + this.grid.c1 + '\t|\t' + this.grid.c2  + '\t|\t' + this.grid.c3 + '\t|\n' +
+        '\t |-----------------------------|' + '\n' 
+        return "```\n" + player + grid + "```\n";
     }
 }
 

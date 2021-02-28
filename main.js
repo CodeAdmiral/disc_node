@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 var fs = require('fs');
-const naughts = require('./naughts.js')
+const naughts = require('./Engine/naughts.js')
 var prefix = '12 '
 // Instantiate naught
 naughtsInstance = new naughts()

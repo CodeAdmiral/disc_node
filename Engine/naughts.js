@@ -1,5 +1,5 @@
 class naughts {
-    grid ='';
+    grid = '';
     playerX = '';
     playerO = '';
     lastPlayed = 'X';

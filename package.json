@@ -1,0 +1,22 @@
+{
+  "name": "disc_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeAdmiral/disc_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeAdmiral/disc_node/issues"
+  },
+  "homepage": "https://github.com/CodeAdmiral/disc_node#readme"
+}

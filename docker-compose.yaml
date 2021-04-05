@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  bot: 
+    build:
+      context: .
+      dockerfile: botContainer.dockerfile 
+    user: "node"
+    working_dir: /home/node/app
+    ports:
+      - "8081"
+    command: "node main.js"

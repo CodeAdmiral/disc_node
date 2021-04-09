@@ -36,4 +36,4 @@ and then to run the application
 node main.js
 ```
 # Next CI/CD
-[![Build Status](http://mp3okzykle2vwlr40qaywz.webrelay.io/api/badges/CodeAdmiral/disc_node/status.svg)](http://mp3okzykle2vwlr40qaywz.webrelay.io/CodeAdmiral/disc_node)
+[![Build Status](http://mp3okzykle2vwlr40qaywz.webrelay.io/api/badges/CodeAdmiral/disc_node/status.svg)](http://mp3okzykle2vwlr40qaywz.webrelay.io/CodeAdmiral/disc_node) 

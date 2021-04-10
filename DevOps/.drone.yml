@@ -12,6 +12,6 @@ steps:
     HOST:
       from_secret: HostIP
   commands:
-  - npm install
-  - export DOCKER_HOST=tcp://HOST:2376
-  - docker stack deploy --compose-file docker-compose.yml drone
+    - npm install
+    - export DOCKER_HOST=tcp://${HOST}:2376
+    - docker stack deploy --compose-file docker-compose.yml drone

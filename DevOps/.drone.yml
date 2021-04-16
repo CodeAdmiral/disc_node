@@ -4,10 +4,12 @@ name: default
 platform:
   os: linux
   arch: arm64
+image_pull_secrets:
+- DockerToken
 
 steps:
 - name: test
-  image: node
+  image: codeadmiral/cicdenvironment:latest
   environment:
     HOST:
       from_secret: HostIP
